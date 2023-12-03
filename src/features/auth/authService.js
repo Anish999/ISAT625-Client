@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const API_URL = '/api/users/';
+const API_URL = process.env.REACT_APP_API_URL+'users/';
 
 const cookieVisited = Cookies.get('visited-isat');
 const isVisited = cookieVisited ? JSON.parse(cookieVisited):null;
